@@ -1,0 +1,61 @@
+<%= form_for(@personal) do |f| %>
+  <% if @personal.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@personal.errors.count, "error") %> prohibited this personal from being saved:</h2>
+
+      <ul>
+      <% @personal.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nombres %><br>
+    <%= f.text_field :nombres %>
+  </div>
+  <div class="field">
+    <%= f.label :apellidos %><br>
+    <%= f.text_field :apellidos %>
+  </div>
+  <div class="field">
+    <%= f.label :cedula %><br>
+    <%= f.text_field :cedula %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    AUTO: <%= f.radio_button(:vehiculo, true) %><br>
+    MOTO: <%= f.radio_button(:vehiculo, false) %>
+  </div>
+  <div class="field">
+    <%= f.label :marca_vehiculo %><br>
+    <%= f.text_field :marca_vehiculo %>
+  </div>
+  <div class="field">
+    <%= f.label :placa %><br>
+    <%= f.text_field :placa %>
+  </div>
+  <div class="field">
+    <%= f.label :color_vehiculo %><br>
+    <%= f.text_field :color_vehiculo %>
+  </div>
+  <div class="field">
+    <%= f.label :telefono_sena %><br>
+    <%= f.text_field :telefono_sena %>
+  </div>
+  <div class="field">
+    <%= f.label :telefono_ip %><br>
+    <%= f.text_field :telefono_ip %>
+  </div>
+  <div class="field">
+    <%= f.label :celular %><br>
+    <%= f.text_field :celular %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

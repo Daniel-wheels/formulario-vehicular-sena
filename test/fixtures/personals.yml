@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombres: MyString
+  apellidos: MyString
+  cedula: MyString
+  email: MyString
+  vehiculo: false
+  marca_vehiculo: MyString
+  placa: MyString
+  color_vehiculo: MyString
+  telefono_sena: MyString
+  telefono_ip: MyString
+  celular: MyString
+
+two:
+  nombres: MyString
+  apellidos: MyString
+  cedula: MyString
+  email: MyString
+  vehiculo: false
+  marca_vehiculo: MyString
+  placa: MyString
+  color_vehiculo: MyString
+  telefono_sena: MyString
+  telefono_ip: MyString
+  celular: MyString
