@@ -4,6 +4,7 @@ class CreatePersonals < ActiveRecord::Migration
       t.string :nombres
       t.string :apellidos
       t.string :cedula
+      t.references :centro
       t.string :email
       t.boolean :vehiculo
       t.string :marca_vehiculo

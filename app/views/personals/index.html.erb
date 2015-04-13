@@ -1,4 +1,13 @@
-<h1>Listing personals</h1>
+<h1>Listado personal</h1>
+
+    <%= form_tag personals_path, :method => 'get' do %>
+    <% content_tag :label do %>
+    Buscar Placa vehiculo:
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Buscar", :name => nil %>
+   
+    <% end %>
+    <% end %>
 
 <table>
   <thead>
@@ -6,6 +15,7 @@
       <th>Nombres</th>
       <th>Apellidos</th>
       <th>Cedula</th>
+      <th>Centro</th>
       <th>Email</th>
       <th>Vehiculo</th>
       <th>Marca vehiculo</th>
@@ -24,6 +34,7 @@
         <td><%= personal.nombres %></td>
         <td><%= personal.apellidos %></td>
         <td><%= personal.cedula %></td>
+         <td><%= personal.centro.nombre %></td>
         <td><%= personal.email %></td>
         <td><%= mostrar_vehiculo(personal.vehiculo) %></td>
         <td><%= personal.marca_vehiculo %></td>
@@ -32,9 +43,9 @@
         <td><%= personal.telefono_sena %></td>
         <td><%= personal.telefono_ip %></td>
         <td><%= personal.celular %></td>
-        <td><%= link_to 'Show', personal %></td>
-        <td><%= link_to 'Edit', edit_personal_path(personal) %></td>
-        <td><%= link_to 'Destroy', personal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostrar', personal %></td>
+        <td><%= link_to 'Editar', edit_personal_path(personal) %></td>
+        <td><%= link_to 'Eliminar', personal, method: :delete, data: { confirm: 'ESTAS SEGURO?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -42,4 +53,11 @@
 
 <br>
 
-<%= link_to 'New Personal', new_personal_path %>
+<%= link_to 'Nuevo Personal', new_personal_path %><br>
+
+ <a href="/personals">Atras</a>
+
+<%= will_paginate @personals, :previous_label => '&laquo; Anterior', :next_label => 'Siguiente
+&raquo;' %>
+<br>
+Personals: <%= @personals.count %>

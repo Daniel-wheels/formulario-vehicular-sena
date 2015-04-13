@@ -4,7 +4,7 @@ class PersonalsController < ApplicationController
   # GET /personals
   # GET /personals.json
   def index
-    @personals = Personal.all
+    @personals = Personal.search(params[:search], params[:page])
   end
 
   # GET /personals/1
@@ -69,6 +69,6 @@ class PersonalsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def personal_params
-      params.require(:personal).permit(:nombres, :apellidos, :cedula, :email, :vehiculo, :marca_vehiculo, :placa, :color_vehiculo, :telefono_sena, :telefono_ip, :celular)
+      params.require(:personal).permit(:nombres, :apellidos, :cedula, :centro_id, :email, :vehiculo, :marca_vehiculo, :placa, :color_vehiculo, :telefono_sena, :telefono_ip, :celular)
     end
 end
