@@ -26,7 +26,6 @@ ActiveRecord::Schema.define(version: 20150406204750) do
     t.integer  "centro_id"
     t.string   "email"
     t.boolean  "vehiculo"
-    t.string   "marca_vehiculo"
     t.string   "placa"
     t.string   "color_vehiculo"
     t.string   "telefono_sena"

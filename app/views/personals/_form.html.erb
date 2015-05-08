@@ -13,15 +13,15 @@
 
   <div class="field">
     <%= f.label :nombres %><br>
-    <%= f.text_field :nombres %>
+    <%= f.text_field :nombres, class: "form-control" %>
   </div>
   <div class="field">
     <%= f.label :apellidos %><br>
-    <%= f.text_field :apellidos %>
+    <%= f.text_field :apellidos, class: "form-control" %>
   </div>
   <div class="field">
     <%= f.label :cedula %><br>
-    <%= f.text_field :cedula %>
+    <%= f.text_field :cedula, class: "form-control" %>
   </div>
   
   <div class="field">
@@ -31,35 +31,32 @@
   
   <div class="field">
     <%= f.label :email %><br>
-    <%= f.text_field :email %>
+    <%= f.text_field :email, class: "form-control" %>
   </div>
   <div class="field">
     AUTO: <%= f.radio_button(:vehiculo, true) %><br>
     MOTO: <%= f.radio_button(:vehiculo, false) %>
   </div>
-  <div class="field">
-    <%= f.label :marca_vehiculo %><br>
-    <%= f.text_field :marca_vehiculo %>
-  </div>
+ 
   <div class="field">
     <%= f.label :placa %><br>
-    <%= f.text_field :placa %>
+    <%= f.text_field :placa, class: "form-control" %>
   </div>
   <div class="field">
     <%= f.label :color_vehiculo %><br>
-    <%= f.text_field :color_vehiculo %>
+    <%= f.text_field :color_vehiculo, class: "form-control" %>
   </div>
   <div class="field">
     <%= f.label :telefono_sena %><br>
-    <%= f.text_field :telefono_sena %>
+    <%= f.text_field :telefono_sena, class: "form-control" %>
   </div>
   <div class="field">
     <%= f.label :telefono_ip %><br>
-    <%= f.text_field :telefono_ip %>
+    <%= f.text_field :telefono_ip, class: "form-control" %>
   </div>
   <div class="field">
     <%= f.label :celular %><br>
-    <%= f.text_field :celular %>
+    <%= f.text_field :celular, class: "form-control" %>
   </div>
   <div class="actions">
     <%= f.submit "Guardar" %>

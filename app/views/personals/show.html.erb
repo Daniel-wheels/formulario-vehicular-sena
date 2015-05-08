@@ -1,65 +1,62 @@
-<p id="notice"><%= notice %></p>
+  <p id="notice"><%= notice %></p>
+  
+  <p>
+    <strong>Nombres:</strong>
+    <%= @personal.nombres %>
+  </p>
+  
+  <p>
+    <strong>Apellidos:</strong>
+    <%= @personal.apellidos %>
+  </p>
+  
+  <p>
+    <strong>Cedula:</strong>
+    <%= @personal.cedula %>
+  </p>
+  
+  <p>
+    <strong>Centro:</strong>
+    <%= @personal.centro.nombre %>
+  </p>
+  
+  
+  <p>
+    <strong>Email:</strong>
+    <%= @personal.email %>
+  </p>
+  
+  <p>
+    <strong>Vehiculo:</strong>
+    <%= mostrar_vehiculo(@personal.vehiculo) %>
+  </p>
+  
+  
+  <p>
+    <strong>Placa:</strong>
+    <%= @personal.placa %>
+  </p>
+  
+  <p>
+    <strong>Color vehiculo:</strong>
+    <%= @personal.color_vehiculo %>
+  </p>
+  
+  <p>
+    <strong>Telefono sena:</strong>
+    <%= @personal.telefono_sena %>
+  </p>
 
-<p>
-  <strong>Nombres:</strong>
-  <%= @personal.nombres %>
-</p>
+  <p>
+    <strong>Telefono ip:</strong>
+    <%= @personal.telefono_ip %>
+  </p>
 
-<p>
-  <strong>Apellidos:</strong>
-  <%= @personal.apellidos %>
-</p>
+  <p>
+    <strong>Celular:</strong>
+    <%= @personal.celular %>
+  </p>
 
-<p>
-  <strong>Cedula:</strong>
-  <%= @personal.cedula %>
-</p>
+  <%= link_to 'Editar', edit_personal_path(@personal) %> |
+  <%= link_to 'Atras', personals_path %>
 
-<p>
-  <strong>Centro:</strong>
-  <%= @personal.centro.nombre %>
-</p>
-
-
-<p>
-  <strong>Email:</strong>
-  <%= @personal.email %>
-</p>
-
-<p>
-  <strong>Vehiculo:</strong>
-  <%= mostrar_vehiculo(@personal.vehiculo) %>
-</p>
-
-<p>
-  <strong>Marca vehiculo:</strong>
-  <%= @personal.marca_vehiculo %>
-</p>
-
-<p>
-  <strong>Placa:</strong>
-  <%= @personal.placa %>
-</p>
-
-<p>
-  <strong>Color vehiculo:</strong>
-  <%= @personal.color_vehiculo %>
-</p>
-
-<p>
-  <strong>Telefono sena:</strong>
-  <%= @personal.telefono_sena %>
-</p>
-
-<p>
-  <strong>Telefono ip:</strong>
-  <%= @personal.telefono_ip %>
-</p>
-
-<p>
-  <strong>Celular:</strong>
-  <%= @personal.celular %>
-</p>
-
-<%= link_to 'Editar', edit_personal_path(@personal) %> |
-<%= link_to 'Atras', personals_path %>

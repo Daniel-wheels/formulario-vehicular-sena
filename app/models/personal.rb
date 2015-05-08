@@ -12,10 +12,10 @@ class Personal < ActiveRecord::Base
     #validacion para un boolean
     validates :vehiculo, inclusion: [true, false] 
     
-    validates :marca_vehiculo, :presence => true
+    
     validates :placa, :presence => true
     
-    validates :telefono_ip, :presence => true
+    
     validates :celular, :presence => true
     
     def self.search(search, page)

@@ -9,7 +9,7 @@
     <% end %>
     <% end %>
 
-<table>
+<table class="table table-hover">
   <thead>
     <tr>
       <th>Nombres</th>
@@ -29,15 +29,15 @@
   </thead>
 
   <tbody>
+  
     <% @personals.each do |personal| %>
       <tr>
         <td><%= personal.nombres %></td>
         <td><%= personal.apellidos %></td>
         <td><%= personal.cedula %></td>
-         <td><%= personal.centro.nombre %></td>
+        <td><%= personal.centro.nombre %></td>
         <td><%= personal.email %></td>
         <td><%= mostrar_vehiculo(personal.vehiculo) %></td>
-        <td><%= personal.marca_vehiculo %></td>
         <td><%= personal.placa %></td>
         <td><%= personal.color_vehiculo %></td>
         <td><%= personal.telefono_sena %></td>
@@ -52,8 +52,11 @@
 </table>
 
 <br>
+<div class="btn btn-info">
 
 <%= link_to 'Nuevo Personal', new_personal_path %><br>
+
+</div>
 
  <a href="/personals">Atras</a>
 

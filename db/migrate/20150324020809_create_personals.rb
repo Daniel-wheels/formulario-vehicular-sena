@@ -7,7 +7,6 @@ class CreatePersonals < ActiveRecord::Migration
       t.references :centro
       t.string :email
       t.boolean :vehiculo
-      t.string :marca_vehiculo
       t.string :placa
       t.string :color_vehiculo
       t.string :telefono_sena
