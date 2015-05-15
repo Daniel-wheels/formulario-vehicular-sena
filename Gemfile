@@ -39,5 +39,5 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 gem 'will_paginate'
-gem 'bootstrap-sass', '~> 3.3.4'
+
 gem 'lazybox'

@@ -13,14 +13,14 @@ class Personal < ActiveRecord::Base
     validates :vehiculo, inclusion: [true, false] 
     
     
-    validates :placa, :presence => true
+    validates :placa, uniqueness: { message: "No se puede Repetir" }
     
     
     validates :celular, :presence => true
     
     def self.search(search, page)
         where(['upper(placa) like ?',
-        "%#{search}%".upcase]).paginate(page: page, per_page: 5).order("placa")
+        "%#{search}%".upcase]).paginate(page: page, per_page: 200000).order("placa")
     end
 	
 end

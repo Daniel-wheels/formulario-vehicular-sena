@@ -4,12 +4,14 @@ class PersonalsController < ApplicationController
   # GET /personals
   # GET /personals.json
   def index
-    @personals = Personal.search(params[:search], params[:page])
+    @personals = Personal.search(params[:search], params[:page]) 
+    @fondo = true
   end
 
   # GET /personals/1
   # GET /personals/1.json
   def show
+    @fondo2 = true
   end
 
   # GET /personals/new

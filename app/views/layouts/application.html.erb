@@ -21,14 +21,23 @@
   
 </script>
 </head>
+<% if @fondo == true%>
+<body class="fondo">
+  
+  <% else if @fondo2 == true %>
+  
+  <body class="fondo2">
+  
+  <%end%>
+  
+  <%end%>
+
 <body>
 <div class="container">
   <div class="row">
     
-      
-      
+          
       <%= yield %>
-      
       
       
   </div>

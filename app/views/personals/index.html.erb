@@ -1,28 +1,26 @@
-<h1>Listado personal</h1>
+<body class="fondo">
+  <br>
+  <div class="relleno">
+    <h1>Listado personal</h1>  
+
 
     <%= form_tag personals_path, :method => 'get' do %>
     <% content_tag :label do %>
     Buscar Placa vehiculo:
-    <%= text_field_tag :search, params[:search] %>
-    <%= submit_tag "Buscar", :name => nil %>
+    <%= text_field_tag :search, params[:search], class:'form-control' %>
+    <%= submit_tag "Buscar",  :name => nil %>
    
     <% end %>
     <% end %>
 
-<table class="table table-hover">
+<div class="scroll"><br>
+  <table class="table table-hover margin" >
   <thead>
     <tr>
       <th>Nombres</th>
       <th>Apellidos</th>
       <th>Cedula</th>
-      <th>Centro</th>
-      <th>Email</th>
-      <th>Vehiculo</th>
-      <th>Marca vehiculo</th>
       <th>Placa</th>
-      <th>Color vehiculo</th>
-      <th>Telefono sena</th>
-      <th>Telefono ip</th>
       <th>Celular</th>
       <th colspan="3"></th>
     </tr>
@@ -35,13 +33,7 @@
         <td><%= personal.nombres %></td>
         <td><%= personal.apellidos %></td>
         <td><%= personal.cedula %></td>
-        <td><%= personal.centro.nombre %></td>
-        <td><%= personal.email %></td>
-        <td><%= mostrar_vehiculo(personal.vehiculo) %></td>
         <td><%= personal.placa %></td>
-        <td><%= personal.color_vehiculo %></td>
-        <td><%= personal.telefono_sena %></td>
-        <td><%= personal.telefono_ip %></td>
         <td><%= personal.celular %></td>
         <td><%= link_to 'Mostrar', personal %></td>
         <td><%= link_to 'Editar', edit_personal_path(personal) %></td>
@@ -50,17 +42,24 @@
     <% end %>
   </tbody>
 </table>
+  <br>
+  
+</div>
 
 <br>
 <div class="btn btn-info">
 
 <%= link_to 'Nuevo Personal', new_personal_path %><br>
+<%= link_to 'Atras', personals_path %>
 
 </div>
 
- <a href="/personals">Atras</a>
+ 
 
 <%= will_paginate @personals, :previous_label => '&laquo; Anterior', :next_label => 'Siguiente
 &raquo;' %>
 <br>
 Personals: <%= @personals.count %>
+
+  </div>
+</body>
