@@ -15,7 +15,7 @@ class Personal < ActiveRecord::Base
     
     validates :placa, uniqueness: { message: "No se puede Repetir" }
     
-    
+    validates :centro_id, :presence => true
     validates :celular, :presence => true
     
     def self.search(search, page)

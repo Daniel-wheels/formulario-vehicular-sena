@@ -1,4 +1,6 @@
 <body class="fondo3">
+  
+  
 <%= form_for(@personal) do |f| %>
   <% if @personal.errors.any? %>
     <div id="error_explanation">
@@ -15,7 +17,7 @@
 <div class="col-md-12">
   <div class="col-md-6">
     <div class="field">
-    <div class="letra2"><%= f.label :nombres %><br></div>
+    <div class="letra2"><%= f.label :Nombres %><br></div>
     <%= f.text_field :nombres, class: "form-control" %>
   </div>
     
@@ -24,7 +26,7 @@
   <div class="col-md-6">
     
     <div class="field">
-    <%= f.label :apellidos %><br>
+    <div class="letra2"><%= f.label :Apellidos %><br></div>
     <%= f.text_field :apellidos, class: "form-control" %>
   </div>
   </div>
@@ -33,7 +35,7 @@
 <div class="col-md-12">
   <div class="col-md-6">
     <div class="field">
-    <%= f.label :cedula %><br>
+    <div class="letra2"><%= f.label :Cedula %><br></div>
     <%= f.text_field :cedula, class: "form-control" %>
   </div>
     
@@ -41,7 +43,7 @@
   
   <div class="col-md-6">
     <div class="field">
-    centro ubicacion<br>
+    <div class="letra2">Centro Ubicacion<br></div>
     <%= f.collection_select :centro_id, Centro.all, :id, :nombre, {prompt: "seleccione centro"}, {class:'form-control'} %>
   </div>
     
@@ -50,7 +52,7 @@
 <div class="col-md-12">
   <div class="col-md-6">
     <div class="field">
-    <%= f.label :email %><br>
+    <div class="letra2"><%= f.label :email %><br></div>
     <%= f.text_field :email, class: "form-control" %>
   </div>
     
@@ -58,8 +60,8 @@
   
   <div class="col-md-6">
     <div class="field rad">
-    AUTO: <%= f.radio_button(:vehiculo, true) %><br>
-    MOTO: <%= f.radio_button(:vehiculo, false) %>
+    <div class="letra2">AUTO:</div> <%= f.radio_button(:vehiculo, true) %><br>
+    <div class="letra2">MOTO:</div> <%= f.radio_button(:vehiculo, false) %>
   </div>
     
     <style>
@@ -73,7 +75,7 @@
 <div class="col-md-12">
   <div class="col-md-6">
     <div class="field">
-    <%= f.label :placa %><br>
+    <div class="letra2"><%= f.label :Placa %><br></div>
     <%= f.text_field :placa, class: "form-control" %>
   </div>
     
@@ -81,7 +83,7 @@
   
   <div class="col-md-6">
     <div class="field">
-    <%= f.label :color_vehiculo %><br>
+    <div class="letra2"><%= f.label :Color_Vehiculo %><br></div>
     <%= f.text_field :color_vehiculo, class: "form-control" %>
   </div>
     
@@ -92,7 +94,7 @@
 <div class="col-md-12">
   <div class="col-md-6">
     <div class="field">
-    <%= f.label :telefono_sena %><br>
+    <div class="letra2"><%= f.label :telefono_sena %><br></div>
     <%= f.text_field :telefono_sena, class: "form-control" %>
   </div>
     
@@ -100,7 +102,7 @@
   
   <div class="col-md-6">
     <div class="field">
-    <%= f.label :telefono_ip %><br>
+    <div class="letra2"><%= f.label :Telefono_iP_OTRO %><br></div>
     <%= f.text_field :telefono_ip, class: "form-control" %>
   </div>
     
@@ -111,7 +113,7 @@
 <div class="col-md-12">
   <div class="col-md-6">
     <div class="field">
-    <%= f.label :celular %><br>
+    <div class="letra2"><%= f.label :celular %><br></div>
     <%= f.text_field :celular, class: "form-control" %>
   </div>
     

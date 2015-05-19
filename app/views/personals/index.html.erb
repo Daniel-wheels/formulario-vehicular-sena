@@ -35,9 +35,9 @@
         <td><%= personal.cedula %></td>
         <td><%= personal.placa %></td>
         <td><%= personal.celular %></td>
-        <td><%= link_to 'Mostrar', personal %></td>
-        <td><%= link_to 'Editar', edit_personal_path(personal) %></td>
-        <td><%= link_to 'Eliminar', personal, method: :delete, data: { confirm: 'ESTAS SEGURO?' } %></td>
+        <td><%= link_to "<i class='fa fa-eye fa-2x encima'>".html_safe, personal %></td>
+        <td><%= link_to "<i class='fa fa-edit fa-2x encima '></i>".html_safe, edit_personal_path(personal) %></td>
+        <td><%= link_to "<i class='fa fa-trash-o fa-2x encima'>".html_safe, personal, method: :delete, data: { confirm: 'ESTAS SEGURO?' } %></td>
       </tr>
     <% end %>
   </tbody>

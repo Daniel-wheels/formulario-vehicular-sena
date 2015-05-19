@@ -24,19 +24,16 @@ a:hover{
 .scroll{
     
     height: 300px;
-	width: 1230px;
+	width: 1200px;
 	
 	
-	overflow-y: scroll;
+	overflow-x:auto;
 }
 
-.margin{
-   
-   
-}
+
 
 .letra{
-    color:#968585;
+    color:#f7eded;
 }
 
 
@@ -183,6 +180,14 @@ body.fondo3 {
 }
 .relleno{
     background-color:white;
+    background: url("sena.png");
+     -webkit-background-size: cover;
+     background-repeat: no-repeat;
+    background-position: top center;
+    -webkit-touch-callout: none;
+     -o-background-size: cover;
+  
+  
     padding: 5px 0px 5px 5px;
     border-radius: 10px;
 }
@@ -195,5 +200,5 @@ body.fondo3 {
 }
 
 .form-control{
-    border-radius: 5px;
+    border-radius: 20px;
 }
