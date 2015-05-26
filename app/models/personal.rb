@@ -8,7 +8,9 @@ class Personal < ActiveRecord::Base
     
     #validacion de atributos unicos
     validates :cedula, uniqueness: { message: "No se puede Repetir" }
-    validates :email, :presence => true
+    validates :email, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i,
+    message: 'Formato no valido' }
+
     
     
     
