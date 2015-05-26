@@ -17,7 +17,7 @@
 <div class="col-md-12">
   <div class="col-md-6">
     <div class="field">
-    <div class="letra2"><%= f.label :Nombres %><br></div>
+    <h4 class="letra2">Nombres</h4>
     <%= f.text_field :nombres, class: "form-control" %>
   </div>
     
@@ -25,7 +25,7 @@
   
   <div class="col-md-6">
     <div class="field">
-    <div class="letra2"><%= f.label :Apellidos %><br></div>
+    <h4 class="letra2">Apellidos</h4>
     <%= f.text_field :apellidos, class: "form-control" %>
    </div>
   </div>
@@ -34,7 +34,7 @@
 <div class="col-md-12">
   <div class="col-md-6">
     <div class="field">
-    <div class="letra2"><%= f.label :Cedula %><br></div>
+    <h4 class="letra2">Cedula</h4>
     <%= f.text_field :cedula, class: "form-control" %>
   </div>
     
@@ -42,7 +42,7 @@
   
   <div class="col-md-6">
     <div class="field">
-    <div class="letra2">Centro Ubicacion<br></div>
+    <h4 class="letra2">Centro Ubicacion</h4>
     <%= f.collection_select :centro_id, Centro.all, :id, :nombre, {prompt: "seleccione centro"}, {class:'form-control'} %>
   </div>
     
@@ -51,7 +51,7 @@
 <div class="col-md-12">
   <div class="col-md-6">
     <div class="field">
-    <div class="letra2"><%= f.label :email %><br></div>
+    <h4 class="letra2">Email</h4>
     <%= f.text_field :email, class: "form-control" %>
   </div>
     
@@ -63,7 +63,7 @@
 
   <div class="col-md-6">
     <div class="field">
-    <div class="letra2"><%= f.label :Placa %><br></div>
+    <h4 class="letra2">Placa</h4>
     <%= f.text_field :placa, class: "form-control" %>
   </div>
     
@@ -73,7 +73,7 @@
   <div class="col-md-12">
   <div class="col-md-6">
     <div class="field">
-    <div class="letra2"><%= f.label :Color_Vehiculo %><br></div>
+    <h4 class="letra2">Color del Vehiculo</h4>
     <%= f.text_field :color_vehiculo, class: "form-control" %>
   </div>
     
@@ -83,7 +83,7 @@
   
   <div class="col-md-6">
     <div class="field">
-    <div class="letra2"><%= f.label :Telefono_iP_OTRO %><br></div>
+    <h4 class="letra2">Telefono IP/Otro</h4>
     <%= f.text_field :telefono_ip, class: "form-control" %>
   </div>
     
@@ -95,7 +95,7 @@
 
   <div class="col-md-6">
     <div class="field">
-    <div><%= f.label :celular %><br></div>
+    <h4 class="letra2">Celular</h4>
     <%= f.text_field :celular, class: "form-control" %>
   </div>
     
