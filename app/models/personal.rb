@@ -9,8 +9,7 @@ class Personal < ActiveRecord::Base
     #validacion de atributos unicos
     validates :cedula, uniqueness: { message: "No se puede Repetir" }
     validates :email, :presence => true
-    #validacion para un boolean
-    validates :vehiculo, inclusion: [true, false] 
+    
     
     
     validates :placa, uniqueness: { message: "No se puede Repetir" }

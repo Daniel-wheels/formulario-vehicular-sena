@@ -24,11 +24,10 @@
   </div>
   
   <div class="col-md-6">
-    
     <div class="field">
     <div class="letra2"><%= f.label :Apellidos %><br></div>
     <%= f.text_field :apellidos, class: "form-control" %>
-  </div>
+   </div>
   </div>
 </div>
 
@@ -58,17 +57,6 @@
     
   </div>
   
-  <div class="col-md-6">
-    <div class="field rad">
-    <div class="letra2">AUTO:</div> <%= f.radio_button(:vehiculo, true) %><br>
-    <div class="letra2">MOTO:</div> <%= f.radio_button(:vehiculo, false) %>
-  </div>
-    
-    <style>
-      .rad{
-        display:inline
-      }
-    </style>
     
   </div>
 </div>
@@ -92,13 +80,6 @@
 
 
 <div class="col-md-12">
-  <div class="col-md-6">
-    <div class="field">
-    <div class="letra2"><%= f.label :telefono_sena %><br></div>
-    <%= f.text_field :telefono_sena, class: "form-control" %>
-  </div>
-    
-  </div>
   
   <div class="col-md-6">
     <div class="field">
@@ -107,13 +88,10 @@
   </div>
     
   </div>
-</div>
 
-
-<div class="col-md-12">
   <div class="col-md-6">
     <div class="field">
-    <div class="letra2"><%= f.label :celular %><br></div>
+    <div><%= f.label :celular %><br></div>
     <%= f.text_field :celular, class: "form-control" %>
   </div>
     
@@ -128,4 +106,5 @@
   </div>
  
 <% end %>
+
 </body>
