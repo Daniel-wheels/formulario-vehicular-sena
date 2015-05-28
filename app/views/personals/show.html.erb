@@ -15,7 +15,7 @@
                         
                         <div class="panel-body panel-body-landing">
                             <table class="table">
-                                
+                                 
                                 
                                 <tr>
                                     <td><strong>Nombres</strong></td>
@@ -36,6 +36,11 @@
                                 <tr>
                                     <td width="50px"><strong>Email</strong></td>
                                     <td><%= @personal.email %></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td><strong>Vehiculo</strong></td>
+                                    <td><%= @personal.transporte.vehiculo rescue nil%></td>
                                 </tr>
                                 
                                  <tr>

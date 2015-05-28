@@ -1,5 +1,5 @@
 class Personal < ActiveRecord::Base
-    
+    belongs_to :transporte
     belongs_to :centro
     
     #validaciones para los campos a llenar
@@ -11,7 +11,7 @@ class Personal < ActiveRecord::Base
     validates :email, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i,
    message: 'Formato no valido' }
 
-    
+    validates :transporte_id, :presence => true
     
     
     validates :placa, uniqueness: { message: "No se puede Repetir" }

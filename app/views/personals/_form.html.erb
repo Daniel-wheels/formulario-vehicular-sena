@@ -58,9 +58,17 @@
   </div>
   
     
+<div class="col-md-6">
+    <div class="field">
+     <h4 class="letra2">Transporte</h4>
+    <%= f.collection_select :transporte_id, Transporte.all, :id, :vehiculo,{prompt: "seleccione Vehiculo"}, {class:'form-control'} %>
+</div>
+  </div>
 
 
+</div>
 
+ <div class="col-md-12">
   <div class="col-md-6">
     <div class="field">
     <h4 class="letra2">Placa</h4>
@@ -69,8 +77,8 @@
     
   </div>
   
-  </div>
-  <div class="col-md-12">
+  
+  
   <div class="col-md-6">
     <div class="field">
     <h4 class="letra2">Color del Vehiculo</h4>
@@ -79,8 +87,10 @@
     
   </div>
 
+</div>
 
-  
+
+  <div class="col-md-12">
   <div class="col-md-6">
     <div class="field">
     <h4 class="letra2">Telefono IP/Otro</h4>
@@ -89,9 +99,7 @@
     
   </div>
   
-  </div>
-  
-  <div class="col-md-12">
+
 
   <div class="col-md-6">
     <div class="field">
@@ -102,6 +110,8 @@
   </div>
   
   </div>
+  
+  
   
 
   
