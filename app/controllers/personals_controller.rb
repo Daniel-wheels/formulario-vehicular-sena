@@ -71,6 +71,6 @@ class PersonalsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def personal_params
-      params.require(:personal).permit(:nombres, :apellidos, :cedula, :centro_id, :email, :placa, :color_vehiculo, :telefono_ip, :celular, :transporte_id)
+      params.require(:personal).permit(:usuario_id, :nombres, :apellidos, :cedula, :centro_id, :email, :placa, :color_vehiculo, :telefono_ip, :celular, :transporte_id)
     end
 end

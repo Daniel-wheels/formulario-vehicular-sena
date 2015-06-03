@@ -1,4 +1,5 @@
 class Personal < ActiveRecord::Base
+    belongs_to :usuario
     belongs_to :transporte
     belongs_to :centro
     
@@ -12,9 +13,9 @@ class Personal < ActiveRecord::Base
    message: 'Formato no valido' }
 
     validates :transporte_id, :presence => true
+     validates :usuario_id, :presence => true
     
-    
-    validates :placa, uniqueness: { message: "No se puede Repetir" }
+    validates :placa, :presence => true
     
     validates :centro_id, :presence => true
     validates :celular, :presence => true

@@ -1,6 +1,7 @@
 class CreatePersonals < ActiveRecord::Migration
   def change
     create_table :personals do |t|
+      t.references :usuario
       t.string :nombres
       t.string :apellidos
       t.string :cedula

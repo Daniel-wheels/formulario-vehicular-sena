@@ -17,6 +17,7 @@
   <table class="table table-hover margin" >
   <thead>
     <tr class="text">
+      <th>usuario</th>
       <th>Nombres</th>
       <th>Apellidos</th>
       <th>Transporte</th>
@@ -30,6 +31,7 @@
   
     <% @personals.each do |personal| %>
       <tr>
+        <td><%= personal.usuario.nombre%></td>
         <td><%= personal.nombres %></td>
         <td><%= personal.apellidos %></td>
         <td><%= personal.transporte.vehiculo %></td>

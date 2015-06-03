@@ -13,8 +13,18 @@
       </ul>
     </div>
   <% end %>
+  
+  
+  <div class="col-md-12">
+    <div class="col-md-6">
+    <div class="field">
+     <h4 class="letra2">Usuario</h4>
+    <%= f.collection_select :usuario_id, Usuario.all, :id, :nombre,{prompt: "seleccione usuario"}, {class:'form-control'} %>
+</div>
+  
+  </div>
 
-<div class="col-md-12">
+
   <div class="col-md-6">
     <div class="field">
     <h4 class="letra2">Nombres</h4>
@@ -22,16 +32,18 @@
   </div>
     
   </div>
+  </div>
   
+  <div class="col-md-12">
   <div class="col-md-6">
     <div class="field">
     <h4 class="letra2">Apellidos</h4>
     <%= f.text_field :apellidos, class: "form-control" %>
    </div>
   </div>
-</div>
 
-<div class="col-md-12">
+
+
   <div class="col-md-6">
     <div class="field">
     <h4 class="letra2">Cedula</h4>
@@ -39,7 +51,10 @@
   </div>
     
   </div>
+  </div>
   
+  
+  <div class="col-md-12">
   <div class="col-md-6">
     <div class="field">
     <h4 class="letra2">Centro Ubicacion</h4>
@@ -47,8 +62,8 @@
   </div>
     
   </div>
-</div>
-<div class="col-md-12">
+
+
   <div class="col-md-6">
     <div class="field">
     <h4 class="letra2">Email</h4>
@@ -56,8 +71,10 @@
   </div>
     
   </div>
-  
+  </div>
     
+    
+<div class="col-md-12">    
 <div class="col-md-6">
     <div class="field">
      <h4 class="letra2">Transporte</h4>
@@ -65,10 +82,7 @@
 </div>
   </div>
 
-
-</div>
-
- <div class="col-md-12">
+ 
   <div class="col-md-6">
     <div class="field">
     <h4 class="letra2">Placa</h4>
@@ -76,9 +90,10 @@
   </div>
     
   </div>
+  </div>
   
   
-  
+  <div class="col-md-12">
   <div class="col-md-6">
     <div class="field">
     <h4 class="letra2">Color del Vehiculo</h4>
@@ -87,10 +102,7 @@
     
   </div>
 
-</div>
-
-
-  <div class="col-md-12">
+  
   <div class="col-md-6">
     <div class="field">
     <h4 class="letra2">Telefono IP/Otro</h4>
@@ -98,9 +110,9 @@
   </div>
     
   </div>
-  
+  </div>
 
-
+<div class="col-md-12">
   <div class="col-md-6">
     <div class="field">
     <h4 class="letra2">Celular</h4>
@@ -118,6 +130,9 @@
   
   <div class="actions">
     <%= f.submit "Guardar", class: 'btn btn-info' %>
+    <div class="btn btn-info">
+
+<%= link_to 'ATRAS', personals_path %></div>
   </div>
  
 <% end %>
