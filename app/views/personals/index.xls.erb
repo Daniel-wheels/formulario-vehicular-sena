@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+  xmlns:o="urn:schemas-microsoft-com:office:office"
+  xmlns:x="urn:schemas-microsoft-com:office:excel"
+  xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+  xmlns:html="http://www.w3.org/TR/REC-html40">
+  <Worksheet ss:Name="personals">
+    <Table>
+      <Row>
+        <Cell><Data ss:Type="String">Usuario</Data></Cell>
+        <Cell><Data ss:Type="String">Nombres</Data></Cell>
+        <Cell><Data ss:Type="String">Apellidos</Data></Cell>
+        <Cell><Data ss:Type="String">Cedula</Data></Cell>
+        <Cell><Data ss:Type="String">Centro</Data></Cell>
+        <Cell><Data ss:Type="String">Transporte</Data></Cell>
+        <Cell><Data ss:Type="String">Email</Data></Cell>
+        <Cell><Data ss:Type="String">Placa</Data></Cell>
+        <Cell><Data ss:Type="String">Color del Vehiculo</Data></Cell>
+        <Cell><Data ss:Type="String">Telefono_ip</Data></Cell>
+        <Cell><Data ss:Type="String">Celular</Data></Cell>
+        
+        
+      </Row>
+    <% @personals.each do |personal| %>
+      <Row>
+        <Cell><Data ss:Type="String"><%= personal.usuario.nombre %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= personal.nombres %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= personal.apellidos %></Data></Cell>
+        <Cell><Data ss:Type="string"><%= personal.cedula %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= personal.centro.nombre %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= personal.transporte.vehiculo %></Data></Cell>
+        <Cell><Data ss:Type="string"><%= personal.email %></Data></Cell>
+        <Cell><Data ss:Type="string"><%= personal.placa %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= personal.color_vehiculo %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= personal.telefono_ip %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= personal.cedula %></Data></Cell>
+        
+      </Row>
+    <% end %>
+    
+    
+    </Table>
+  </Worksheet>
+</Workbook>
+

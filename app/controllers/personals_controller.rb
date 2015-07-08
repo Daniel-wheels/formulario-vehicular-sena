@@ -6,6 +6,14 @@ class PersonalsController < ApplicationController
   def index
     @personals = Personal.search(params[:search], params[:page]) 
     @fondo = true
+    
+    
+    respond_to do |format|
+      format.html
+      format.csv { send_data @personals.to_csv }
+      
+    end
+    
   end
 
   # GET /personals/1

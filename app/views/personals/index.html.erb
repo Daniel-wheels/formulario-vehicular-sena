@@ -7,13 +7,13 @@
     <%= form_tag personals_path, :method => 'get' do %>
     <% content_tag :label do %>
     Buscar Placa vehiculo:
-    <%= text_field_tag :search, params[:search], class:'form-control' %>
+    <%= text_field_tag :search, params[:search] %>
     <%= submit_tag "Buscar",  :name => nil %>
    
     <% end %>
     <% end %>
 
-<div class="scroll"><br>
+<div class="scroll col-xs-12"><br>
   <table class="table table-hover margin" >
   <thead>
     <tr class="text">
@@ -48,13 +48,23 @@
   
 </div>
 
+
 <br>
 <div class="btn btn-info">
 
-<%= link_to 'Nuevo Personal', new_personal_path %><br>
-<%= link_to 'Atras', personals_path %>
+<%= link_to 'Nuevo Personal', new_personal_path %><br></div>
 
-</div>
+<div class="btn btn-info">
+<%= link_to 'Atras', personals_path %></div>
+
+<div class="btn btn-info">
+        
+        <%= link_to "csv", personals_path(format: "csv") %> 
+    </div>
+
+
+
+
 
  
 
@@ -64,4 +74,7 @@
 Personals: <%= @personals.count %>
 
   </div>
+  
+  
+   
 </body>

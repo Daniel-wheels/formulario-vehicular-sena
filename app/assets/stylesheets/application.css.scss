@@ -18,7 +18,7 @@
 
 
 a:hover{
-    background-color:transparent;
+    background-color:white;
 }
 
 .scroll{
@@ -27,8 +27,10 @@ a:hover{
 	width: 1200px;
 	
 	
-	overflow-x:auto;
+	overflow-x:scroll;
+	
 }
+
 
 
 
@@ -46,7 +48,7 @@ a:hover{
 .texto3d{
      font:normal 60pt Arial;
 
- color:black;
+ color:#fc7323;
  text-shadow: 0 1px 0 #f7f4f4,
  0 2px 0 #c9c9c9,
  0 3px 0 #bbb,
@@ -174,7 +176,7 @@ body.fondo3 {
 
 
 .relleno{
-    background-color:white;
+    background-color:grey;
     background: url("sena.jpg");
      -webkit-background-size: cover;
      background-repeat: no-repeat;
@@ -205,7 +207,7 @@ body.fondo3 {
 
 
 .relleno2{
-    background-color:black;
+    background-color:#238276;
     //background: url("sena.png");
      -webkit-background-size: cover;
      background-repeat: no-repeat;
