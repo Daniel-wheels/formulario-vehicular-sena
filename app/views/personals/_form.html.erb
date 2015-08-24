@@ -55,15 +55,25 @@
   
   
   <div class="col-md-12">
-  <div class="col-md-6">
-    <div class="field">
-    <h4 class="letra2">Centro</h4>
-    <%= f.collection_select :centro_id, Centro.all, :id, :nombre, {prompt: "seleccione centro"}, {class:'form-control'} %>
-  </div>
+    <div class="col-md-6">
+      <div class="field">
+        <h4 class="letra2">Ficha</h4>
+        <%= f.text_field :ficha, class: "form-control" %>
+      </div>
+    </div>
+  
+  
+    <div class="col-md-6">
+      <div class="field">
+        <h4 class="letra2">Centro</h4>
+        <%= f.collection_select :centro_id, Centro.all, :id, :nombre, {prompt: "seleccione centro"}, {class:'form-control'} %>
+      </div>
     
-  </div>
+    </div>
+  
+</div>
 
-
+  <div class="col-md-12">
   <div class="col-md-6">
     <div class="field">
     <h4 class="letra2">Email</h4>
@@ -71,18 +81,19 @@
   </div>
     
   </div>
-  </div>
+  
     
     
-<div class="col-md-12">    
 <div class="col-md-6">
     <div class="field">
      <h4 class="letra2">Transporte</h4>
     <%= f.collection_select :transporte_id, Transporte.all, :id, :vehiculo,{prompt: "seleccione Vehiculo"}, {class:'form-control'} %>
 </div>
   </div>
+  
+  </div>
 
- 
+ <div class="col-md-12">
   <div class="col-md-6">
     <div class="field">
     <h4 class="letra2">Placa</h4>
@@ -90,29 +101,28 @@
   </div>
     
   </div>
-  </div>
   
   
-  <div class="col-md-12">
+
   <div class="col-md-6">
     <div class="field">
     <h4 class="letra2">Color del Vehiculo</h4>
     <%= f.text_field :color_vehiculo, class: "form-control" %>
-  </div>
+   </div>
     
   </div>
+  </div>
 
-  
+  <div class="col-md-12">
   <div class="col-md-6">
     <div class="field">
     <h4 class="letra2">Telefono IP/Otro</h4>
     <%= f.text_field :telefono_ip, class: "form-control" %>
   </div>
     
-  </div>
+  
   </div>
 
-<div class="col-md-12">
   <div class="col-md-6">
     <div class="field">
     <h4 class="letra2">Celular</h4>

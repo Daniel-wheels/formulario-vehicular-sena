@@ -1,4 +1,7 @@
 class Personal < ActiveRecord::Base
+    
+    
+    #generador de archivo excel
     def self.to_csv(options = {})
       CSV.generate(options) do |csv|
         csv << column_names
@@ -23,6 +26,8 @@ class Personal < ActiveRecord::Base
     validates :cedula, :presence => true, uniqueness: { message: "No se puede Repetir" }
     validates :email, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i,
    message: 'Formato no valido' }
+   
+   validates :ficha, :presence => true
 
     validates :transporte_id, :presence => true
      validates :usuario_id, :presence => true

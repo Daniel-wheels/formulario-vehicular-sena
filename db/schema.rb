@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 20150529142227) do
     t.string   "nombres"
     t.string   "apellidos"
     t.string   "cedula"
+    t.string   "ficha"
     t.integer  "centro_id"
     t.integer  "transporte_id"
     t.string   "email"

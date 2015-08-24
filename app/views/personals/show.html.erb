@@ -25,18 +25,27 @@
                                     <td><strong>Nombres</strong></td>
                                     <td><%= @personal.nombres%></td>
                                 </tr>
+                                
                                 <tr>
                                     <td><strong>Apellidos</strong></td>
                                     <td><%= @personal.apellidos %></td>
                                 </tr>
+                                
                                 <tr>
                                     <td><strong>Cedula</strong></td>
                                     <td><%= @personal.cedula %></td>
                                 </tr>
+                                
+                                 <tr>
+                                    <td><strong>Ficha</strong></td>
+                                    <td><%= @personal.ficha %></td>
+                                </tr>
+                                
                                 <tr>
                                     <td><strong>Centro</strong></td>
                                     <td><%= @personal.centro.nombre rescue nil  %></td>
                                 </tr>
+                                
                                 <tr>
                                     <td width="50px"><strong>Email</strong></td>
                                     <td><%= @personal.email %></td>
@@ -51,6 +60,7 @@
                                     <td width="50px"><strong>Placa</strong></td>
                                     <td><%= @personal.placa %></td>
                                  </tr>
+                                 
                                  <tr>
                                     <td width="50px"><strong>Color</strong></i></td>
                                     <td><%= @personal.color_vehiculo %></td>
@@ -60,10 +70,12 @@
                                     <td width="50px"><strong>Telefono IP/Otro</strong></i></td>
                                     <td><%= @personal.telefono_ip %></td>
                                  </tr>
+                                 
                                  <tr>
                                     <td width="50px"><strong>Celular</strong></i></td>
                                     <td><%= @personal.celular %></td>
                                  </tr>
+                                 
                             </table>
                         </div>
                         <div  class="btn btn-info">
